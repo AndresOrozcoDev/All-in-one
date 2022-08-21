@@ -1,0 +1,10 @@
+.text {
+
+    &--error {
+        color: $danger-color;
+    }
+
+    &--success {
+        color: $success-color;
+    }
+}
