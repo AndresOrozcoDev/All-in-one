@@ -9,11 +9,12 @@ import { EmailValidator, FormControl, FormGroup, Validators } from '@angular/for
 export class HomeComponent implements OnInit {
 
   signInForm = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.pattern('a-zA-Z')]),
-    password: new FormControl('', [Validators.required, Validators.pattern('0-9')])
+    email: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required)
   });
 
   showPassword: boolean = false;
+  isValid: boolean = true;
   
   constructor() { }
 
@@ -22,6 +23,17 @@ export class HomeComponent implements OnInit {
 
   showHidePassword() {
     this.showPassword = !this.showPassword;
+  }
+
+  signIn() {
+    if(this.signInForm.valid) {
+      this.isValid = true;
+      console.log('Sign In ...', this.signInForm.value);
+    } else {
+      console.log('Invalid', this.signInForm.value);
+      this.isValid = false;
+    }
+    
   }
 
   get email() { 
