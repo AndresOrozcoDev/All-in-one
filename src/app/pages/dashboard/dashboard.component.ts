@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { menuDashboardMock } from 'src/app/shared/mocks/menu-dashboard-mock';
+import { menu } from 'src/app/shared/models/menu-models';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  menu : Array<menu> = menuDashboardMock;
+  
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
+  }
+
+  signOut() {
+    this.route.navigate(['..']);
   }
 
 }
