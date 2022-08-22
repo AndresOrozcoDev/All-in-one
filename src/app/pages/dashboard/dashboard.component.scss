@@ -1,0 +1,99 @@
+@import "../../shared/styles/main.scss";
+
+.dashboard {
+    width: 100%;
+    height: 100vh;
+    background-color: aquamarine;
+
+    .header {
+        width: 100%;
+        height: 70px;
+        background-color: $primary-color;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0px 5%;
+
+        &__signout {
+            height: 32px;
+            width: 32px;
+        }
+    }
+
+    .row {
+        margin: 0px;
+    }
+
+    .menu {
+        height: 55px;
+        background-color: $gray-light-color;
+        padding: 0px;
+
+        &__list {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width: 100vw;
+            overflow-x: scroll;
+            
+            @media (min-width: $medium-screen) {
+                max-height: calc(100vh - 70px);
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+
+            .item {
+                width: 100%;
+                height: 100%;
+                background-color: $gray-light-color;
+                border-left: 1px solid $gray-dark-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                padding: 10px;
+
+                &:hover {
+                    background-color: $gray-dark-color;
+                }
+                
+                @media (min-width: $medium-screen) {
+                    height: 70px !important;
+                    border-bottom: 1px solid $gray-dark-color;
+                    border-bottom: 1px solid $gray-dark-color;
+                }
+
+                &__name {
+                    font-size: $small-font;
+                    font-weight: $light-weight;
+                    padding-left: 7px;
+                }
+
+                &__logo {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+
+
+        @media (min-width: $medium-screen) {
+            height: calc(100vh - 70px);
+
+            &__list {
+                flex-direction: column;
+            }
+        }
+    }
+
+    .template {
+        height: calc(100vh - 70px - 50px);
+        width: 100%;
+
+        @media (min-width: $medium-screen) {
+            height: calc(100vh - 70px);
+        }
+    }
+}

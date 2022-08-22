@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmailValidator, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,7 @@ export class HomeComponent implements OnInit {
   showPassword: boolean = false;
   isValid: boolean = true;
   
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
@@ -29,6 +30,7 @@ export class HomeComponent implements OnInit {
     if(this.signInForm.valid) {
       this.isValid = true;
       console.log('Sign In ...', this.signInForm.value);
+      this.route.navigate(['dashboard']);
     } else {
       console.log('Invalid', this.signInForm.value);
       this.isValid = false;
