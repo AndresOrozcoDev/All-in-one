@@ -42,14 +42,6 @@
             padding: 0.7rem 0rem;
         }
 
-        &__separator {
-            align-items: center;
-            border-bottom: 1px solid $gray-dark-color;
-            display: flex;
-            margin: 20px 0px;
-            text-align: center;
-        }
-
         &__forget {
             font-size: $small-font;
             font-weight: $light-weight;

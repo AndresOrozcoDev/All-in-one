@@ -1,1 +1,12 @@
-<p>countries works!</p>
+<div class="continer mt-3">
+    <div class="row">
+        <div class="col text-center">
+            <span class="text__subtitle">Find Your Country</span>
+            <form class="form mt-2" [formGroup]="countryForm">
+                <input type="text" class="form__control" formControlName="country" placeholder="Search your country">
+            </form>
+        </div>
+    </div>
+    <div class="separator"></div>
+    <div class="row"></div>
+</div>

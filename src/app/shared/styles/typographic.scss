@@ -1,10 +1,33 @@
 .text {
 
+    &__title {
+        font-size: $xlarge-font;
+        font-weight: $bold-weight;
+    }
+
+    &__subtitle {
+        font-size: $large-font;
+        font-weight: $bold-weight;
+    }
+
+    &__paragrah {
+        font-size: $small-font;
+        font-weight: $regular-weight;
+    }
+
+    &--justify {
+        text-align: center;
+    }
+
     &--error {
         color: $danger-color;
     }
 
     &--success {
         color: $success-color;
+    }
+
+    &--semibold {
+        font-weight: $semibold-weight;
     }
 }

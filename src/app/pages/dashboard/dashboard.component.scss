@@ -12,11 +12,6 @@
         justify-content: flex-end;
         align-items: center;
         padding: 0px 5%;
-
-        &__signout {
-            height: 32px;
-            width: 32px;
-        }
     }
 
     .row {
@@ -88,7 +83,7 @@
     }
 
     .template {
-        height: calc(100vh - 70px - 50px);
+        height: calc(100vh - 70px - 55px);
 
         @media (min-width: $medium-screen) {
             height: calc(100vh - 70px);
