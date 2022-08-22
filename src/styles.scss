@@ -6,20 +6,27 @@ body {
     font-family: 'Readex Pro', sans-serif;
 
     ::-webkit-scrollbar {
-        width: 2px;
+        height: 3px;
+        width: 3px;
     }
   
     ::-webkit-scrollbar-track {
+        height: 3px;
+        width: 3px;
         border-radius: 6px;
         background-color: $gray-light-color;
     }
   
     ::-webkit-scrollbar-thumb {
+        height: 3px;
+        width: 3px;
         border-radius: 6px;
         background-color: $gray-dark-color;
     }
   
     ::-webkit-scrollbar-thumb:hover {
+        height: 3px;
+        width: 3px;
         background-color: $gray-dark-color;
     }
 }

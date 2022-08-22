@@ -17,5 +17,4 @@ export const menuDashboardMock = [
         route: 'tasking',
         resource: '../../../assets/icons/task.png'
     }
-
 ]
