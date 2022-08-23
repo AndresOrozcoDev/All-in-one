@@ -3,10 +3,26 @@
         <div class="col text-center">
             <span class="text__subtitle">Find Your Country</span>
             <form class="form mt-2" [formGroup]="countryForm">
-                <input type="text" class="form__control" formControlName="country" placeholder="Search your country">
+                <select formControlName="country" class="form__control" #select (change)='handleSelect(select.value)'>
+                    <option *ngFor="let country of countries" value="{{country.name.common}}">{{country.name.common}}</option>
+                </select>
             </form>
         </div>
     </div>
     <div class="separator"></div>
-    <div class="row"></div>
+    <div class="row">
+        <div class="col">
+            <div class="text-center" *ngFor="let country of country">
+                <span class="text__subtitle">{{country.name.common}}</span>
+                <div class="row mt-2">
+                    <div class="col">
+                        <img src="{{country.flags.svg}}" alt="{{country.name.common}} Flag" class="image">
+                    </div>
+                    <div class="col">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
