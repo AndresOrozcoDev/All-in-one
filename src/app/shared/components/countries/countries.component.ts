@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Country } from '../../models/country-models';
+import { CountriesService } from './countries.service';
 
 @Component({
   selector: 'app-countries',
@@ -12,9 +14,25 @@ export class CountriesComponent implements OnInit {
     country: new FormControl('', Validators.required)
   });
 
-  constructor() { }
+  countries: Array<Country> = [];
+  country: Array<Country> = [];
+
+  constructor( private services: CountriesService ) { }
 
   ngOnInit(): void {
+    this.getAllCountries();
+  }
+
+  getAllCountries() {
+    this.services.getAllCountries().subscribe( (resp) => {
+      this.countries = resp;
+    });
+  }
+
+  handleSelect(value: string){
+    this.services.getCountry(value).subscribe( (resp) => {
+      this.country = resp;
+    });
   }
 
 }
