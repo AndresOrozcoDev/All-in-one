@@ -16,5 +16,11 @@ export const menuDashboardMock = [
         name: 'Tasking',
         route: 'tasking',
         resource: '../../../assets/icons/task.png'
+    },
+    {
+        id: 3,
+        name: 'Weather',
+        route: 'weather',
+        resource: '../../../assets/icons/weather.png'
     }
 ]

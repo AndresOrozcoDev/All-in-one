@@ -5,12 +5,14 @@ import { TaskingComponent } from './components/tasking/tasking.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { WeatherComponent } from './components/weather/weather.component';
 
 @NgModule({
   declarations: [
     CountriesComponent,
     TaskingComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    WeatherComponent
   ],
   imports: [
     CommonModule,

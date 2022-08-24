@@ -4,6 +4,7 @@
             <span class="text__subtitle">Find Your Country</span>
             <form class="form mt-2" [formGroup]="countryForm">
                 <select formControlName="country" class="form__control" #select (change)='handleSelect(select.value)'>
+                    <option value="" selected disabled>Select a country</option>
                     <option *ngFor="let country of countries" value="{{country.name.common}}">{{country.name.common}}</option>
                 </select>
             </form>
@@ -15,10 +16,10 @@
             <div class="text-center" *ngFor="let country of country">
                 <span class="text__subtitle">{{country.name.common}}</span>
                 <div class="row mt-2">
-                    <div class="col">
+                    <div class="col-sm-12 col-md-6">
                         <img src="{{country.flags.svg}}" alt="{{country.name.common}} Flag" class="image">
                     </div>
-                    <div class="col">
+                    <div class="col-sm-12 col-md-6">
 
                     </div>
                 </div>
