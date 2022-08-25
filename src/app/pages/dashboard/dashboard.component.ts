@@ -19,6 +19,7 @@ export class DashboardComponent implements OnInit {
 
   signOut() {
     this.route.navigate(['..']);
+    sessionStorage.removeItem('User');
   }
 
 }

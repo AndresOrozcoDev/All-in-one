@@ -29,8 +29,8 @@ export class HomeComponent implements OnInit {
   signIn() {
     if(this.signInForm.valid) {
       this.isValid = true;
-      console.log('Sign In ...', this.signInForm.value);
       this.route.navigate(['dashboard']);
+      sessionStorage.setItem('User', JSON.stringify(this.signInForm.value));
     } else {
       console.log('Invalid', this.signInForm.value);
       this.isValid = false;
