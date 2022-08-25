@@ -16,11 +16,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 0px 1rem;
+        padding: 2.5rem 1rem;
         background-color: $white-color;
         border-radius: 6px;
         width: 80%;
-        height: 60%;
 
         @media (min-width: $medium-screen) {
             width: 40%;

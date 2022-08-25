@@ -6,13 +6,15 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherComponent } from './components/weather/weather.component';
+import { ShoppingComponent } from './components/shopping/shopping.component';
 
 @NgModule({
   declarations: [
     CountriesComponent,
     TaskingComponent,
     PortfolioComponent,
-    WeatherComponent
+    WeatherComponent,
+    ShoppingComponent
   ],
   imports: [
     CommonModule,
