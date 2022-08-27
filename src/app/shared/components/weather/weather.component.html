@@ -5,7 +5,41 @@
         </div>
     </div>
     <div class="separator"></div>
-    <div class="row"></div>
-    <p>{{latitude}}</p>
-    <p>{{longitude}}</p>
+    <div class="row data">
+        <div class="col-sm-12 col-md-6">
+            <div class="data__location">
+                <p class="text__paragrah text--semibold">Your location</p>
+                <p class="text__paragrah">Latitude: {{weatherData.coord.lat}}</p>
+                <p class="text__paragrah">Longitude: {{weatherData.coord.lon}}</p>
+                <p class="text__paragrah text--semibold">{{weatherData.main.temp}}</p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="data__weight mt-3">
+                <div *ngIf="(latitude === 0 && longitude === 0)" class="empty text-center">
+                    <span class="text__paragrah">No location found</span>
+                </div>
+                <div *ngIf="!(latitude === 0 && longitude === 0)">
+                    <div class="row my-2">
+                        <div class="col text-center">
+                            <span class="text__paragrah">{{weatherData.weather[0].description | titlecase }}</span>
+                        </div>
+                    </div>
+                    <div class="data__row my-2">
+                        <div class="data__colLeft container__gridCenter">
+                            <img src="../../../../assets/icons/thermometer.png" alt="Thermometer Logo" class="icon">
+                            <span class="text__paragrah">{{weatherData.main.temp_min}}</span>
+                        </div>
+                        <div class="data__colCenter container__gridCenter">
+                            <span class="text__paragrah">Temperature</span>
+                        </div>
+                        <div class="data__colRigth container__gridCenter">
+                            <img src="../../../../assets/icons/thermometer.png" alt="Thermometer Logo" class="icon">
+                            <span class="text__paragrah">{{weatherData.main.temp_max}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

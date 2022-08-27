@@ -84,7 +84,6 @@
 
     .template {
         max-height: calc(100vh - 70px - 55px);
-        overflow-x: scroll;
 
         @media (min-width: $medium-screen) {
             max-height: calc(100vh - 70px);
