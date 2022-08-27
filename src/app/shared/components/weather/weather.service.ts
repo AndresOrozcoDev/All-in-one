@@ -1,10 +1,17 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { apiKey, endpointResources, urlBases } from 'src/environments/environment';
+import { ResponseWeather } from '../../models/weather-models';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WeatherService {
+
+  urlBase = urlBases.urlBaseWeather;
+  weather = endpointResources.weather;
+  appid = apiKey.appid;
 
   constructor( private http: HttpClient ) { }
 
@@ -18,8 +25,12 @@ export class WeatherService {
     });
   }
 
-  getWeigth() {
-    return this.http.get('https://api.openweathermap.org/data/3.0/onecall?lat=-73.2474105&lon=40.7967216&appid=674b59719e7fbcdb2fc49ca2edd1ab7d')
+  getWeigth(latitude: number, longitude: number): Observable<any> {
+    let params = new HttpParams()
+      .set('lat', latitude)
+      .set('lon', longitude)
+      .set('appid', this.appid)
+    return this.http.get<ResponseWeather>(this.urlBase + this.weather, {params: params});
   }
   
 }

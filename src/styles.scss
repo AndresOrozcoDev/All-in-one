@@ -40,5 +40,10 @@ ul {
     padding-left: 0px !important;
     margin-bottom: 0px;
 }
+
+p {
+    margin-bottom: 0.5rem !important;
+}
+
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';

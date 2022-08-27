@@ -5,3 +5,18 @@
     margin: 20px 0px;
     text-align: center;
 }
+
+.container {
+
+    &__gridCenter {
+        display: grid;
+        place-items: center;
+    }
+
+    &__flexCenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
