@@ -23,7 +23,7 @@
                             <td>{{ product.id }}</td>
                             <td>{{ product.name }}</td>
                             <td>{{ product.price }}</td>
-                            <td><img src="../../../../assets/icons/shopping.png" alt="Add bag" class="icon" (click)="addBag(product)"></td>
+                            <td><img src="../../../../assets/icons/plus.png" alt="Add bag" title="Add bag" class="icon icon--small" (click)="addBag(product)"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -33,11 +33,14 @@
             <div class="cart">
                 <p class="text__paragrah text--justify text--semibold">Bag</p>
                 <p class="text__paragrah text--justify">Your selected products</p>
-                <div *ngFor="let product of productsBag" class="cart__item">
-                    <span>{{product.name}}</span>
-                    <span>{{product.price}}</span>
-                    <img src="" alt="Remove Bag" (click)="removeBag(product)">
+                <div class="cart__products">
+                    <div *ngFor="let product of productsBag" class="cart__item">
+                        <span class="text__paragrah">{{product.name}}</span>
+                        <span class="text__paragrah">{{product.price | currency}}</span>
+                        <img src="../../../../assets/icons/close.png" class="icon icon--small" title="Remove bag" alt="Remove Bag" (click)="removeBag(product)">
+                    </div>
                 </div>
+                <input type="button" value="Checkout" class="btn btn__primary" [disabled]="productsBag.length == 0">
             </div>
         </div>
     </div>

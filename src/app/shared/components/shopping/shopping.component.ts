@@ -26,14 +26,12 @@ export class ShoppingComponent implements OnInit {
 
   addBag(product: Product) {
     this.productsBag.push(product);
-    console.log('Adding...', this.productsBag);
   }
 
   removeBag(product: Product) {
     this.productsBag = this.productsBag.filter( e => 
       e.id !== product.id
     );
-    console.log('Removing...', this.productsBag);
   }
 
 }

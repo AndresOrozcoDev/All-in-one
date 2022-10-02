@@ -1,0 +1,13 @@
+@import "../../styles/main.scss";
+
+.container {
+
+    &__country{
+
+        @media (min-width: $medium-screen) {
+            max-height: 60vh;
+            overflow-y: scroll;
+        }
+    }
+
+}
