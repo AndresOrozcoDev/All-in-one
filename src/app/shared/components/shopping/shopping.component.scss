@@ -1,0 +1,9 @@
+@import "../../styles/main.scss";
+
+.list, .cart{
+    @extend .container--border;
+}
+
+.list {
+    padding: 1rem 2rem;
+}

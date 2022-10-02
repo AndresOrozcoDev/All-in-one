@@ -3,9 +3,7 @@
 .data {
 
     &__location {
-        padding: 0.7rem 0rem;
-        border: 1px solid $gray-light-color;
-        box-sizing: border-box;
+        @extend .container--border;
         border-radius: 6px;
         text-align: center;
         background: url('../../../../assets/images/location.jpg') no-repeat center center / cover;
