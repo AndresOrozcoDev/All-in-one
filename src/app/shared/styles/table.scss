@@ -1,0 +1,12 @@
+.table {
+    text-align: center;
+}
+
+td {
+    @extend .text__paragrah;
+}
+
+th {
+    @extend .text__paragrah;
+    @extend .text--semibold;
+}
