@@ -10,6 +10,7 @@ import { ShoppingService } from './shopping.service';
 export class ShoppingComponent implements OnInit {
 
   products : Array<Product> = [];
+  productsBag : Array<Product> = [];
 
   constructor( private services: ShoppingService ) { }
 
@@ -23,9 +24,16 @@ export class ShoppingComponent implements OnInit {
     })
   }
 
-  addCart(product: Product) {
-    console.log('Adding...', product);
-    
+  addBag(product: Product) {
+    this.productsBag.push(product);
+    console.log('Adding...', this.productsBag);
+  }
+
+  removeBag(product: Product) {
+    this.productsBag = this.productsBag.filter( e => 
+      e.id !== product.id
+    );
+    console.log('Removing...', this.productsBag);
   }
 
 }

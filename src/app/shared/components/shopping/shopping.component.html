@@ -23,7 +23,7 @@
                             <td>{{ product.id }}</td>
                             <td>{{ product.name }}</td>
                             <td>{{ product.price }}</td>
-                            <td><img src="../../../../assets/icons/shopping.png" class="icon" (click)="addCart(product)"></td>
+                            <td><img src="../../../../assets/icons/shopping.png" alt="Add bag" class="icon" (click)="addBag(product)"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -31,7 +31,13 @@
         </div>
         <div class="col-md-12 col-lg-4">
             <div class="cart">
-
+                <p class="text__paragrah text--justify text--semibold">Bag</p>
+                <p class="text__paragrah text--justify">Your selected products</p>
+                <div *ngFor="let product of productsBag" class="cart__item">
+                    <span>{{product.name}}</span>
+                    <span>{{product.price}}</span>
+                    <img src="" alt="Remove Bag" (click)="removeBag(product)">
+                </div>
             </div>
         </div>
     </div>
