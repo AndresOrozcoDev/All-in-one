@@ -2,7 +2,7 @@ export const menuDashboardMock = [
     {
         id: 0,
         name: 'Dashboard',
-        route: './',
+        route: 'home',
         resource: '../../../assets/icons/menu.png'
     },
     {

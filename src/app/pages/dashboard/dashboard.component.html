@@ -1,11 +1,11 @@
 <div class="dashboard">
     <div class="header">
-        <img src="../../../assets/icons/log-out.png" alt="Logo Sign Out" class="icon header__signout" title="Sign Out" (click)="signOut()">
+        <img src="../../../assets/icons/log-out.png" alt="Logo Sign Out" class="icon--small" title="Sign Out" (click)="signOut()">
     </div>
         <div class="row">
             <div class="col-12 col-md-2 menu">
                 <ul class="menu__list">
-                    <li *ngFor="let item of menu" class="item" routerLink="{{item.route}}" title="{{item.name}}">
+                    <li *ngFor="let item of menu" class="item" routerLink="{{item.route}}" title="{{item.name}}" routerLinkActive="active-link">
                         <img src="{{item.resource}}" alt="Logo {{item.name}}" class="item__logo">
                         <span class="item__name">{{item.name}}</span>
                     </li>

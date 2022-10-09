@@ -6,7 +6,7 @@
 
     .header {
         width: 100%;
-        height: 70px;
+        height: 60px;
         background-color: $primary-color;
         display: flex;
         justify-content: flex-end;
@@ -17,10 +17,10 @@
     .row {
         margin: 0px;
     }
-
+    
     .menu {
-        height: 55px;
-        background-color: $gray-light-color;
+        height: 60px;
+        background-color: $primary-color;
         padding: 0px;
 
         &__list {
@@ -33,7 +33,7 @@
             overflow-x: scroll;
             
             @media (min-width: $medium-screen) {
-                max-height: calc(100vh - 70px);
+                max-height: calc(100vh - 60px);
                 overflow-y: scroll;
                 overflow-x: hidden;
             }
@@ -41,40 +41,52 @@
             .item {
                 width: 100%;
                 height: 100%;
-                background-color: $gray-light-color;
-                border-left: 1px solid $gray-dark-color;
+                background-color: $primary-color;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 cursor: pointer;
                 padding: 10px;
+                margin: 0rem 0.4rem;
 
                 &:hover {
-                    background-color: $gray-dark-color;
+                    background-color: $primary-light-color;
                 }
                 
                 @media (min-width: $medium-screen) {
-                    height: 70px !important;
-                    border-bottom: 1px solid $gray-dark-color;
-                    border-bottom: 1px solid $gray-dark-color;
+                    height: 60px !important;
+                    margin: 0rem;
+                    justify-content: start;
+                    padding-left: 20px;;
                 }
 
                 &__name {
                     font-size: $small-font;
                     font-weight: $light-weight;
                     padding-left: 7px;
+                    color: $gray-light-color;
                 }
 
                 &__logo {
-                    width: 32px;
-                    height: 32px;
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            .active-link {
+                border-bottom: 4px solid $white-color;
+                
+                @media (min-width: $medium-screen) {
+                    background-color: $primary-light-color;
+                    border-right: 5px solid $white-color;
+                    border-bottom: none;
                 }
             }
         }
 
 
         @media (min-width: $medium-screen) {
-            height: calc(100vh - 70px);
+            height: calc(100vh - 60px);
 
             &__list {
                 flex-direction: column;

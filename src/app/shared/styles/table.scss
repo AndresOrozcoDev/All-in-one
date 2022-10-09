@@ -3,7 +3,8 @@
 }
 
 td {
-    @extend .text__paragrah;
+    @extend .text__message;
+    @extend .text--regular;
 }
 
 th {

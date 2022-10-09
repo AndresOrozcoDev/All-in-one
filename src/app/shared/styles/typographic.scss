@@ -15,8 +15,17 @@
         font-weight: $regular-weight;
     }
 
+    &__message {
+        font-size: $xsmall-font;
+        font-weight: $light-weight;
+    }
+
     &--justify {
         text-align: center;
+    }
+
+    &--end {
+        text-align: end;
     }
 
     &--error {
@@ -33,5 +42,15 @@
 
     &--bold {
         font-weight: $bold-weight;
+    }
+    
+    &--regular {
+        font-weight: $regular-weight;
+    }
+    
+    &--noLink {
+        text-decoration: none;
+        color: $primary-color;
+        font-weight: $semibold-weight;
     }
 }

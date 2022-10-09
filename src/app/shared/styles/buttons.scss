@@ -1,25 +1,16 @@
 .btn {
     border-radius: 5px;
-    width: 250px;
+    width: 100%;
     font-size: $small-font;
     font-weight: $regular-weight;
+    margin: 0.8rem 0rem;
 
     &__primary {
         background-color: $primary-color;
         color: white;
 
         &:hover {
-            background-color: $primary-dark-color;
-            color: white;
-        }
-    }
-
-    &__secondary {
-        background-color: $secondary-color;
-        color: white;
-
-        &:hover {
-            background-color: $secondary-dark-color;
+            background-color: $primary-light-color;
             color: white;
         }
     }

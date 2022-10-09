@@ -22,7 +22,7 @@
                         <tr *ngFor="let product of products">
                             <td>{{ product.id }}</td>
                             <td>{{ product.name }}</td>
-                            <td>{{ product.price }}</td>
+                            <td>{{ product.price | currency:'COP':'symbol-narrow':'3.0' }}</td>
                             <td><img src="../../../../assets/icons/plus.png" alt="Add bag" title="Add bag" class="icon icon--small" (click)="addBag(product)"></td>
                         </tr>
                     </tbody>
@@ -32,11 +32,11 @@
         <div class="col-md-12 col-lg-4">
             <div class="cart">
                 <p class="text__paragrah text--justify text--semibold">Bag</p>
-                <p class="text__paragrah text--justify">Your selected products</p>
+                <p class="text__message text--justify">Your selected products</p>
                 <div class="cart__products">
                     <div *ngFor="let product of productsBag" class="cart__item">
-                        <span class="text__paragrah">{{product.name}}</span>
-                        <span class="text__paragrah">{{product.price | currency}}</span>
+                        <span class="text__message text--regular">{{product.name}}</span>
+                        <span class="text__message text--regular">{{product.price | currency:'COP':'symbol-narrow':'3.0' }}</span>
                         <img src="../../../../assets/icons/close.png" class="icon icon--small" title="Remove bag" alt="Remove Bag" (click)="removeBag(product)">
                     </div>
                 </div>
