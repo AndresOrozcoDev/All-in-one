@@ -61,6 +61,7 @@
                 }
 
                 &__name {
+                    @extend .text--ellipsis;
                     font-size: $small-font;
                     font-weight: $light-weight;
                     padding-left: 7px;

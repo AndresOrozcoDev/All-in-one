@@ -53,4 +53,10 @@
         color: $primary-color;
         font-weight: $semibold-weight;
     }
+
+    &--ellipsis {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 }
