@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherComponent } from './components/weather/weather.component';
 import { ShoppingComponent } from './components/shopping/shopping.component';
+import { CurrencyComponent } from './components/currency/currency.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ShoppingComponent } from './components/shopping/shopping.component';
     TaskingComponent,
     PortfolioComponent,
     WeatherComponent,
-    ShoppingComponent
+    ShoppingComponent,
+    CurrencyComponent
   ],
   imports: [
     CommonModule,

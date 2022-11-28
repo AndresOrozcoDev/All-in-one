@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EmailValidator, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   showPassword: boolean = false;
   isValid: boolean = true;
   
-  constructor(private route: Router) { }
+  constructor( private route: Router ) { }
 
   ngOnInit(): void {
   }
