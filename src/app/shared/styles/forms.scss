@@ -26,6 +26,10 @@
         font-size: $small-font;
         font-weight: $semibold-weight;
         margin-bottom: 0.2rem;
+
+        &--radio {
+            padding-left: 5px !important;
+        }
     }
 
 }

@@ -1,0 +1,19 @@
+<div class="continer mt-3">
+    <div class="row">
+        <div class="col text-center">
+            <span class="text__subtitle">Convert Currency</span>
+            <form class="form row mt-2" [formGroup]="convertForm">
+                <div class="custom-control custom-radio col">
+                    <input id="USD" type="radio" class="custom-control-input" value="USD" name="currency" formControlName="currency" (change)="changeCurrency()">
+                    <label class="custom-control-label form__label--radio" for="USD">USD</label>
+                </div>
+                <div class="custom-control custom-radio col">
+                    <input id="COP" type="radio" class="custom-control-input" value="COP" name="currency" formControlName="currency" (change)="changeCurrency()">
+                    <label class="custom-control-label form__label--radio" for="COP">COP</label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="separator"></div>
+    <div class="row"></div>
+</div>

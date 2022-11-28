@@ -12,13 +12,15 @@ export const apiKey = {
 
 export const urlBases = {
   urlBaseCountries: 'https://restcountries.com/v3.1/',
-  urlBaseWeather: 'https://api.openweathermap.org/data/2.5/',
+  urlBaseWeather: 'https://api.openweathermap.org/data/2.5/', 
+  urlBaseCurrency: 'https://api.exchangerate.host/',          // https://exchangerate.host/#/
 }
 
 export const endpointResources = {
   allCountries: 'all',
   nameCountry: 'name/',
-  weather: 'weather'
+  weather: 'weather',
+  latestRates: 'latest'
 }
 
 /*
